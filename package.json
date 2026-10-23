@@ -1,0 +1,66 @@
+{
+  "name": "@stevanfreeborn/png2pdf",
+  "version": "0.0.0",
+  "description": "Convert PNG images to PDF files from the command line.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Stevan Freeborn",
+  "keywords": [
+    "png",
+    "pdf",
+    "convert",
+    "cli",
+    "image"
+  ],
+  "bin": {
+    "png2pdf": "dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm test"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "fast-glob": "^3.3.3",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.5",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^5.0.5"
+  }
+}
