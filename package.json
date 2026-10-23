@@ -1,10 +1,22 @@
 {
   "name": "@stevanfreeborn/png2pdf",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Convert PNG images to PDF files from the command line.",
   "type": "module",
   "license": "MIT",
-  "author": "Stevan Freeborn",
+  "author": {
+    "name": "Stevan Freeborn",
+    "email": "stevan.freeborn@gmail.com",
+    "url": "https://stevanfreeborn.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevanFreeborn/png2pdf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/StevanFreeborn/png2pdf/issues"
+  },
+  "homepage": "https://github.com/StevanFreeborn/png2pdf",
   "keywords": [
     "png",
     "pdf",
